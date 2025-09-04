@@ -8,12 +8,15 @@ $(`#input-${inputCounter}`).focus();
 function handleCommand(x){
     console.log("Command Handling",x);
     if (x=="command=show aboutme"){
-        $(`#cR-${r}`).append(`<div>This is about Ayush</div>`);
+        $(`#cR-${r}`).append(`<div class="ps-5">This is about Ayush</div>`);
         
     }
     else if (x=="command=open contactme"){
         $(`#cR-${r}`).append(`<div class="ps-5"><p class="mb-0"><span class="text-white">Name:<span><span style="color:#63706C"> Kumar Ayush<span></p><p class="mb-0"><span class="text-white">Location:<span><span style="color:#63706C">Punjab, India<span></p><p class="mb-0"><span class="text-white">Call:<span><span style="color:#63706C">+91 9365566209<span></p><p class="mb-0"><span class="text-white">Email:<span><span style="color:#63706C">kumarayush2024@outlook.com<span></p></div>`);
         }
+    else{
+        $(`#cR-${r}`).append(`<div class="ps-5 mb-0 pb-0"><p class="text-danger">Unknown Command!!<p></div>`);
+    }
     return
     
 }
